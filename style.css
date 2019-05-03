@@ -1,0 +1,252 @@
+body {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("images/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font: 15px arial, sans-serif;
+  }
+  #app {
+    text-align: center;
+  }
+  #diceBar {
+    height: 25%;
+    width: 100%;
+  }
+  .dice {
+    background-color: white;
+    width: 16%;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    border: 2px solid black;
+  }
+  .lockedDice {
+    width: 18%;
+    height: 18%;
+    margin-top: 14px;
+    margin-left: 0 px;
+    margin-right: 0px;
+    box-shadow: 10px 10px 8px black;
+  }
+  #rollButtonBar {
+    height: 50px;
+  }
+  #rollButton {
+    opacity: 0.8;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: blue;
+    border-radius: 18px;
+    outline: none;
+    box-shadow: 10px 10px 8px black;
+    margin-bottom: 0 px;
+  }
+  #scoreBoard {
+    width: 90%x;
+    height: 90%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 18px;
+    opacity: 0.8;
+    box-shadow: 10px 10px 8px black;
+  }
+  .scoreboard-container {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 30% 20% 30% 20%;
+    border-radius: 4px;
+  }
+  .scoreboard-item {
+    background-color: lightcyan;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  .scoreboard-value-item {
+    background-color: lightcyan;
+    text-align: center;
+    padding-top: 16%;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .resultModal-content {
+    background-color: lightblue;
+    color: black;
+    font-size: 24px;
+    opacity: 0.8;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 24px;
+  }
+  .newGameButton {
+    color: white;
+    margin-bottom: 24px;
+    font-size: 24px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: blue;
+    border-radius: 18px;
+    outline: none;
+    box-shadow: 4px 4px 8px black;
+  }
+  .rotate {
+    animation: rotation 0.5s linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font: 15px arial, sans-serif;
+  }
+  #app {
+    text-align: center
+  }
+  .dice {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 2px solid black;
+  }
+  .lockedDice {
+    width: 120px;
+    height: 120px;
+    margin: 0px;
+    box-shadow: 10px 10px 8px black;
+  }
+  #rollButton {
+    opacity: 0.8;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: blue;
+    border-radius: 18px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 10px 10px 8px black;
+  }
+  #rollButton:hover {
+    background-color: white;
+    color: blue;
+  }
+  #scoreBoard {
+    width: 450px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 18px;
+    opacity: 0.8;
+    box-shadow: 10px 10px 8px black;
+  }
+  .scoreboard-container {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 30% 20% 30% 20%;
+    padding: 1px;
+    border-radius: 4px;
+  }
+  .scoreboard-item {
+    background-color: lightcyan;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  .scoreboard-value-item {
+    background-color: lightcyan;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  .scoreboard-value-item:hover {
+    cursor: pointer;
+    background-color: darkblue;
+  }
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .resultModal-content {
+    background-color: lightblue;
+    color: black;
+    font-size: 24px;
+    opacity: 0.8;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 24px;
+  }
+  .newGameButton {
+    color: white;
+    margin-bottom: 24px;
+    font-size: 24px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: blue;
+    border-radius: 18px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 4px 4px 8px black;
+  }
+  .rotate {
+    animation: rotation 0.5s linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}

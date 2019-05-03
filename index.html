@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <dice-bar id="diceBar" v-on:lock1='lock1' v-on:lock2='lock2' v-on:lock3='lock3' v-on:lock4='lock4' v-on:lock5='lock5'>
+        </dice-bar>
+        <div id="rollButtonBar">
+                <button id="rollButton" @click="rollDices" v-show="rollNumber < 4 && roundNumber < 15">Kasta tärningar!
+                        {{ 4 - rollNumber  }} kast kvar</button>
+        </div>
+        
+        <score-board id="scoreBoard" v-on:check1='check1' v-on:check2='check2' v-on:check3='check3' v-on:check4='check4'
+            v-on:check5='check5' v-on:check6='check6' v-on:check9='check9' v-on:check10='check10' v-on:check11='check11'
+            v-on:check12='check12' v-on:check13='check13' v-on:check14='check14' v-on:check15='check15'
+            v-on:check16='check16' v-on:check17='check17'>
+        </score-board>
+        <div id= "resultModal" class="modal" v-if="roundNumber == 15">
+            <div class= "resultModal-content">
+                <p>Spelet slut, du fick {{ finalResult }} poäng!</p>
+                <button class="newGameButton" v-on:click='reloadGame'>Play again</button>
+             </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+<script src="main.js"></script>
